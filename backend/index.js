@@ -12,12 +12,10 @@ app.use(express.json());
 app.use('/api', noteRoutes);
 
 app.get('/', (req, res) => {
-    res.json({
-        message: "Selamat datang di Notes API!",
-        status: "Running",
-        endpoints: "/api/notes"
-    });
+    res.send('backend berhasil');
 });
+
+console.log("CEK HOST DB:", process.env.DB_HOST);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
