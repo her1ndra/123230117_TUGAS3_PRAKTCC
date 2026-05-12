@@ -11,7 +11,7 @@ Content-Type: application/json
 }
 
 ### Update Catatan
-PUT https://be-rest-311135974217.us-central1.run.app/api/notes/3
+PUT https://be-rest-311135974217.us-central1.run.app/api/notes/2
 Content-Type: application/json
 
 {
@@ -20,4 +20,4 @@ Content-Type: application/json
 }
 
 ### Hapus Catatan
-DELETE https://be-rest-311135974217.us-central1.run.app/api/notes/3
+DELETE https://be-rest-311135974217.us-central1.run.app/api/notes/2
