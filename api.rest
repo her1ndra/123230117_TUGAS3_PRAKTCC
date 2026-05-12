@@ -1,0 +1,23 @@
+### Ambil Semua Catatan
+GET http://localhost:3000/api/notes
+
+### Tambah Catatan Baru
+POST http://localhost:3000/api/notes
+Content-Type: application/json
+
+{
+    "judul": "APAYAK",
+    "isi": "APAKEK"
+}
+
+### Update Catatan
+PUT http://localhost:3000/api/notes/1
+Content-Type: application/json
+
+{
+    "judul": "ITU LAH",
+    "isi": "ADALAH POKOKNYA"
+}
+
+### Hapus Catatan
+DELETE http://localhost:3000/api/notes/1

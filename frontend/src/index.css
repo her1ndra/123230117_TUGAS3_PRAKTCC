@@ -1,0 +1,146 @@
+:root {
+    --bg-color: #f4f7f6;
+    --card-color: #ffffff;
+    --primary-color: #4a90e2;
+    --primary-hover: #357abd;
+    --edit-color: #f1c40f;
+    --delete-color: #e74c3c;
+    --text-main: #2d3436;
+    --text-sub: #636e72;
+    --border-color: #dfe6e9;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.hidden { display: none !important; }
+
+.view-section {
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.main-header {
+    background-color: var(--card-color);
+    padding: 1rem 2rem;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo { font-size: 1.5rem; font-weight: 600; color: var(--primary-color); }
+.logo span { color: var(--text-main); }
+
+.main-content {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.list-header, .form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.form-header {
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+
+.list-header h3, .form-header h3 { margin: 0; font-size: 1.5rem; }
+
+.btn-primary {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-primary:hover { background-color: var(--primary-hover); transform: translateY(-2px); }
+
+.btn-secondary {
+    padding: 8px 16px;
+    background-color: #e2e6ea;
+    color: var(--text-main);
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-block { width: 100%; margin-top: 1rem; padding: 12px; }
+
+.form-card {
+    background-color: var(--card-color);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.input-group { margin-bottom: 1.5rem; }
+.input-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; color: var(--text-sub); }
+
+input, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: #fafbfc;
+    transition: var(--transition);
+    resize: vertical;
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.note-card {
+    background-color: var(--card-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.note-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+.note-card .date { color: var(--text-sub); font-size: 0.8rem; margin-bottom: 1rem; }
+
+.note-card .actions {
+    display: flex; gap: 10px; margin-top: auto; border-top: 1px solid var(--border-color); padding-top: 1rem;
+}
+
+.btn-edit { background-color: rgba(241, 196, 15, 0.1); color: var(--edit-color); border: none; padding: 8px; border-radius: 6px; cursor: pointer; }
+.btn-delete { background-color: rgba(231, 76, 60, 0.1); color: var(--delete-color); border: none; padding: 8px; border-radius: 6px; cursor: pointer; }
