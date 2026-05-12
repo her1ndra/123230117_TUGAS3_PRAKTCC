@@ -1,8 +1,8 @@
 ### Ambil Semua Catatan
-GET http://localhost:3000/api/notes
+GET https://be-rest-311135974217.us-central1.run.app/api/notes
 
 ### Tambah Catatan Baru
-POST http://localhost:3000/api/notes
+POST https://be-rest-311135974217.us-central1.run.app/api/notes
 Content-Type: application/json
 
 {
@@ -11,7 +11,7 @@ Content-Type: application/json
 }
 
 ### Update Catatan
-PUT http://localhost:3000/api/notes/1
+PUT https://be-rest-311135974217.us-central1.run.app/api/notes/3
 Content-Type: application/json
 
 {
@@ -20,4 +20,4 @@ Content-Type: application/json
 }
 
 ### Hapus Catatan
-DELETE http://localhost:3000/api/notes/1
+DELETE https://be-rest-311135974217.us-central1.run.app/api/notes/3
