@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const NoteList = () => {
   const [notes, setNotes] = useState([]);
-  const API_URL = "http://localhost:3000/api/notes";
+  const API_URL = "https://be-rest-311135974217.us-central1.run.app/api/notes";
 
   useEffect(() => { getNotes(); }, []);
 

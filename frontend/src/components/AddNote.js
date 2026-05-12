@@ -10,7 +10,7 @@ const AddNote = () => {
   const saveNote = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3000/api/notes", { judul, isi });
+      await axios.post("https://be-rest-311135974217.us-central1.run.app/api/notes", { judul, isi });
       navigate("/");
     } catch (error) { console.error(error); }
   };

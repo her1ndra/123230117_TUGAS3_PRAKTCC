@@ -10,7 +10,7 @@ const EditNote = () => {
 
   useEffect(() => {
     const getNoteById = async () => {
-      const response = await axios.get(`http://localhost:3000/api/notes/${id}`);
+      const response = await axios.get(`https://be-rest-311135974217.us-central1.run.app/api/notes/${id}`);
       const data = Array.isArray(response.data) ? response.data[0] : response.data;
       setJudul(data.judul);
       setIsi(data.isi);
@@ -21,7 +21,7 @@ const EditNote = () => {
   const updateNote = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3000/api/notes/${id}`, { judul, isi });
+      await axios.put(`https://be-rest-311135974217.us-central1.run.app/api/notes/${id}`, { judul, isi });
       navigate("/");
     } catch (error) { console.error(error); }
   };
